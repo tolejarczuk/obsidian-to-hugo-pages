@@ -74,5 +74,5 @@ runs:
       if: ${{ github.ref == 'refs/heads/main' }}
       with:
         personal_token: ${{ inputs.github-token }}
-        publish_dir: ./public
-        #external_repository: ${{ inputs.external-repository }} 
+        publish_dir: ./${{ inputs.vault-path }}/public
+        external_repository: ${{ inputs.external-repository }} 
