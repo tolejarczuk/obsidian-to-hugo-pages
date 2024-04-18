@@ -1,6 +1,6 @@
-name: 'obsidian-to-hugo-pages'
+name: 'obsidian-to-hugo-pages-external'
 description: 'Convert Obsidian notes to Hugo and publish on Github Pages'
-author: 'x1sec'
+author: 'tolejarczuk, fork of haxrob'
 branding: 
   icon: play-circle
   color: black
