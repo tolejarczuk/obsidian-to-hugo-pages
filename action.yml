@@ -14,6 +14,9 @@ inputs:
   github-token:
     required: true
     type: string
+  destination_dir:
+    required: false
+    type: string
 
 runs:
   using: "composite"
@@ -75,4 +78,5 @@ runs:
       with:
         personal_token: ${{ inputs.github-token }}
         publish_dir: ./public
+        destination_dir: ${{ inputs.destination_dir }}
         external_repository: ${{ inputs.external-repository }} 
