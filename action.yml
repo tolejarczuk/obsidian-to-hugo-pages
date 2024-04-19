@@ -59,15 +59,15 @@ runs:
 
     - name: Copy over layout fixes to correct path
       shell: bash
-      run: cp layout/layout/* layouts/_default/_markup/
+      run: cp layout/layout/* public/layouts/_default/_markup/
 
     - name: Export Vault
       shell: bash
-      run: obsidian-export ./${{ inputs.vault-path }} ./content/posts --only-tags public
+      run: obsidian-export ./${{ inputs.vault-path }} ./public/content/posts --only-tags public
 
     - name: Build
       shell: bash
-      run: hugo --minify
+      run: hugo -s public --minify
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
